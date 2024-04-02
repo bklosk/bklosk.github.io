@@ -1,12 +1,12 @@
 // rename the file App.jsx
 // delete the React import
 import { createRoot } from "react-dom/client";
-import ForceGraph3D from 'react-force-graph-3d';
+import ForceGraph2D from 'react-force-graph-2d';
 
 const App = () => {
   return (
-    <div>
-      <ForceGraph3D
+    <div id='my-graph'>
+      <ForceGraph2D
         graphData={
             {
                 nodes: [
@@ -27,8 +27,7 @@ const App = () => {
             }
         }
         backgroundColor="#FFFFF0"
-        linkColor="3F3F37"
-        linkOpacity={1}
+        linkColor={() => '#626255'}
         nodeAutoColorBy={"id"}
       />
     </div>
