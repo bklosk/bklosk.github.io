@@ -1,9 +1,12 @@
 {
+  "version": "0.1.0",
+  "homepage": "https://bklosk.github.io",
   "dependencies": {
     "@vitejs/plugin-react": "^4.2.1",
     "babel": "^6.23.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-force-graph-3d": "^1.24.2",
     "vite": "^5.2.7"
   },
   "scripts": {
