@@ -2,10 +2,21 @@
 // delete the React import
 import { createRoot } from "react-dom/client";
 import ForceGraph2D from 'react-force-graph-2d';
+import { useState } from 'react';
+import './style.css'
 
 const App = () => {
+  const [displayWidth, setDisplayWidth] = useState(window.innerWidth);
+  const [displayHeight, setDisplayHeight] = useState(window.innerHeight);
+
+  //dynamically resize the graph when the window is resized
+  window.addEventListener('resize', () => {
+    setDisplayWidth(window.innerWidth);
+    setDisplayHeight(window.innerHeight);
+
+});
   return (
-    <div id='my-graph'>
+    <div>
       <ForceGraph2D
         graphData={
             {
@@ -29,6 +40,9 @@ const App = () => {
         backgroundColor="#FFFFF0"
         linkColor={() => '#626255'}
         nodeAutoColorBy={"id"}
+        nodeRelSize={6}
+        width={displayWidth}
+        height={displayHeight}
       />
     </div>
   );
