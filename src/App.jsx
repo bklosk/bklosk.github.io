@@ -20,12 +20,16 @@ const App = () => {
                 links: [
                     { source: 1, target: 2 },
                     { source: 1, target: 3 },
-                    { source: 1, target: 4 },
+                    { source: 2, target: 4 },
                     { source: 1, target: 5 },
 
                 ],
             }
         }
+        backgroundColor="#FFFFF0"
+        linkColor="3F3F37"
+        linkOpacity={1}
+        nodeAutoColorBy={"id"}
       />
     </div>
   );
